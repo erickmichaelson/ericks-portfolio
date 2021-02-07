@@ -1,10 +1,11 @@
+/* This segment affects the entire page and it sets up border boxes so I can size them */
 *   {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-
+/* This header is set to go across the whole top of the page*/
 header{
     position: relative;
     left: 0;
@@ -12,12 +13,12 @@ header{
     right: 0;
     padding: 32px; 
     background-color: lightcoral;
-
     color: ivory;
-    font-family:Garamond;
+    font-family:Garamond sans-serif 'Times New Roman', Times, serif;
     font-weight: lighter;
         
 }
+/* This lays out the background image for the body layout */
 body{
     background-color: lavenderblush;
     background-image: url(gemini.png);
@@ -27,6 +28,7 @@ body{
     background-position: inherit;
 
 }
+/* These are the navigation links to get to the rest of the page easily */
 .nav-links a {
     color: white;
     font-family: Garamond;
@@ -48,7 +50,7 @@ ul{
 }
 
 a.about-me {
-    height: ;
+    
     background-color: lightcoral;
     padding: 15px;
     position: absolute;
@@ -89,12 +91,6 @@ a.recent-work:hover {
     transition: background-color .5s;
 }
 
-.clear
-{
-    inline-size: 100%;
-    clear: both;
-}
-
 .self-image img {
     top: 30px;
     height: 250px;
@@ -114,6 +110,7 @@ div.break {
 }
 
 div.recent-work{
+
     padding: 200px;
 
     background-color: lightcoral;
@@ -121,17 +118,34 @@ div.recent-work{
     color: lightcyan;
     
 }
-div.filler-images img {
+/* These are styling for the filler images that I will eventually use to link recent-works */
+/* I tried to make them dynamic but it didn't work as planned. Will come back to this. */
+div.filler-image img {
     height: 300px;
+    width: 300px;
     position: relative;
+    float:inline-start;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
+div.filler-image-2 img {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    float:inline-end;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
 }
 
+/* This is the text for the about me section I have it aligned to the left. */
 div.about-me{
     color: lightcoral;
     padding: 200px;
     text-align: left;
  
 }
+/* This makes the regular text for the contact info white and formated */
 div.contact-info{
     color: lightcyan;
     padding: 150px;
@@ -139,22 +153,26 @@ div.contact-info{
     text-decoration: none;
     position: relative;
 }
+/* This makes the hyperlink texts not just blue and underscored */
 a.contact-links{
+    font-size: larger;
     text-decoration: none;
-    color: lightpink;
+    color: lavender;
     size: 15px;
 
 }
-
+/* I tried to make some media queries. I couldn't get all the way figured out what I wanted to do to make the nav links go under the picture */
 @media only screen and (max-width:750px) {
     body {
         flex-wrap: wrap;
+        
         
     }
     .nav-links{
         flex-direction: column;
     }
 }
+
 @media only screen and (max-width:300px){
     body{
         display: inline;
