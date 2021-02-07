@@ -111,7 +111,7 @@ div.break {
 
 div.recent-work{
 
-    padding: 200px;
+    padding: 100px;
 
     background-color: lightcoral;
    position: relative;
@@ -143,22 +143,25 @@ div.about-me{
     color: lightcoral;
     padding: 200px;
     text-align: left;
+    font-family:Garamond sans-serif 'Times New Roman', Times, serif;
  
 }
 /* This makes the regular text for the contact info white and formated */
-div.contact-info{
+aside.contact-info{
     color: lightcyan;
     padding: 150px;
     background-color: lightcoral;
     text-decoration: none;
     position: relative;
+    font-family:Garamond sans-serif 'Times New Roman', Times, serif;
 }
 /* This makes the hyperlink texts not just blue and underscored */
 a.contact-links{
     font-size: larger;
     text-decoration: none;
-    color: lavender;
+    color: lightpink;
     size: 15px;
+    font-family:Garamond sans-serif 'Times New Roman', Times, serif;
 
 }
 /* I tried to make some media queries. I couldn't get all the way figured out what I wanted to do to make the nav links go under the picture */
@@ -175,10 +178,13 @@ a.contact-links{
 
 @media only screen and (max-width:300px){
     body{
-        display: inline;
+        display: flexbox;
+        padding: 100px;
     }
     .nav-links{
         flex-wrap: wrap;
+        display: flex;
+        
     }
     .about-me{
         flex-wrap: wrap;
