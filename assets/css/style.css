@@ -3,70 +3,76 @@
     padding: 0;
     margin: 0;
 }
-body{
-    background-color: lavenderblush;
-    background-image: url(leaves.png);
-    background-blend-mode:lighten;
-    background-size: cover;
-    background-position: inherit;
-}
 
-header {
+
+header{
     position: relative;
     left: 0;
     top: 0;
     right: 0;
     padding: 32px; 
     background-color: lightcoral;
-    
+
     color: ivory;
     font-family:Garamond;
     font-weight: lighter;
         
 }
+body{
+    background-color: lavenderblush;
+    background-image: url(gemini.png);
+    background-blend-mode:soft-light;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: inherit;
 
-.nav-links {   
-    background-color: lightcoral;
-    padding: 5px;
-    height: 20px;
-    font-size: 20px;
-    font-family: Garamond;
-    color: limegreen;
-    font-weight: bold;
 }
+.nav-links a {
+    color: white;
+    font-family: Garamond;
+    background-color: lightcoral;
+    font-weight: bolder;
+    font-size: larger;
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
 ul{
     list-style: none;
 }
 
-a{
-    list-style-type: none;
-    color: whitesmoke;
-   
-}
 a.about-me {
-    
+    height: ;
     background-color: lightcoral;
     padding: 15px;
-
     position: absolute;
-    right: 30px;
+    right: 60px;
     top: 200px;
+    border-radius: 15%;
 }
 a.recent-work {
     
     background-color: lightcoral;
     padding: 15px;
     position: absolute;
-    right: 100px;
+    right: 30px;
     top: 300px;
+   border-radius: 15%;
 }
 a.contact-me {
     background-color: lightcoral;
     padding: 15px;
     padding-left: 22px;
     position: absolute;
-    right: 200px;
+    right: 30px;
     top: 400px;
+    border-radius: 15%;
 }
 a.contact-me:hover {
     background-color: lightpink;
@@ -100,13 +106,66 @@ a.recent-work:hover {
     float: left;
     left: 5%; 
 }
+
 div.break {
     right: 0;
     left: 0;
     height: 500px;
 }
-@media only screen and (max-widht:750px) {
+
+div.recent-work{
+    padding: 200px;
+
+    background-color: lightcoral;
+   position: relative;
+    color: lightcyan;
+    
+}
+div.filler-images img {
+    height: 300px;
+    position: relative;
+}
+
+div.about-me{
+    color: lightcoral;
+    padding: 200px;
+    text-align: left;
+ 
+}
+div.contact-info{
+    color: lightcyan;
+    padding: 150px;
+    background-color: lightcoral;
+    text-decoration: none;
+    position: relative;
+}
+a.contact-links{
+    text-decoration: none;
+    color: lightpink;
+    size: 15px;
+
+}
+
+@media only screen and (max-width:750px) {
     body {
-        max-width: 750px;
+        flex-wrap: wrap;
+        
+    }
+    .nav-links{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:300px){
+    body{
+        display: inline;
+    }
+    .nav-links{
+        flex-wrap: wrap;
+    }
+    .about-me{
+        flex-wrap: wrap;
+    }
+    .recent-work {
+        flex-wrap: wrap;
     }
 }
