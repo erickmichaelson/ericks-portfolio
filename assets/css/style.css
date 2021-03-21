@@ -63,7 +63,7 @@ a.recent-work {
     background-color: lightcoral;
     padding: 15px;
     position: absolute;
-    right: 30px;
+    right: 25px;
     top: 300px;
    border-radius: 15%;
 }
@@ -142,6 +142,8 @@ div.filler-image-2 img {
 div.about-me{
     color: lightcoral;
     padding: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-align: left;
     font-family:Garamond sans-serif 'Times New Roman', Times, serif;
  
@@ -165,31 +167,22 @@ a.contact-links{
 
 }
 /* I tried to make some media queries. I couldn't get all the way figured out what I wanted to do to make the nav links go under the picture */
-@media only screen and (max-width:750px) {
+@media only screen and (max-width:950px) {
     body {
         flex-wrap: wrap;
-        
-        
     }
+    div.about-me{
+        padding: 10px 10px 10px;
+    }
+       div.about-content {
+           padding: 200px;
+           padding-left: 15px;
+           padding-right: 15px;
+       } 
+    
     .nav-links{
         flex-direction: column;
     }
 }
 
-@media only screen and (max-width:300px){
-    body{
-        display: flexbox;
-        padding: 100px;
-    }
-    .nav-links{
-        flex-wrap: wrap;
-        display: flex;
-        
-    }
-    .about-me{
-        flex-wrap: wrap;
-    }
-    .recent-work {
-        flex-wrap: wrap;
-    }
-}
+
