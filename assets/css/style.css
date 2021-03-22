@@ -120,7 +120,7 @@ div.recent-work{
 }
 /* These are styling for the filler images that I will eventually use to link recent-works */
 /* I tried to make them dynamic but it didn't work as planned. Will come back to this. */
-div.filler-image img {
+.recent-work-image img {
     height: 300px;
     width: 300px;
     position: relative;
@@ -128,7 +128,7 @@ div.filler-image img {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
 }
-div.filler-image-2 img {
+.recent-work-image-2 img {
     height: 150px;
     width: 150px;
     position: relative;
